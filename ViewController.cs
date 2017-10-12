@@ -13,10 +13,10 @@ namespace BMICalculator
         {
             base.ViewDidLoad();
 
-            calculateButton.TouchUpInside+= calculateButton_TouchInside;
+            calculateButton.TouchUpInside+= CalculateButton_TouchInside;
         }
 
-        void calculateButton_TouchInside(object sender, EventArgs e)
+        void CalculateButton_TouchInside(object sender, EventArgs e)
         {
             float height = float.Parse(heightTextField.Text);
             float weight = float.Parse(weightTextField.Text);
