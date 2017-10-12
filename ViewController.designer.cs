@@ -13,12 +13,47 @@ namespace BMICalculator
     [Register ("ViewController")]
     partial class ViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel bmiLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton calculateButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField heightTextField { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField weightTextField { get; set; }
+
         [Action ("UIButton390_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void UIButton390_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
+            if (bmiLabel != null) {
+                bmiLabel.Dispose ();
+                bmiLabel = null;
+            }
+
+            if (calculateButton != null) {
+                calculateButton.Dispose ();
+                calculateButton = null;
+            }
+
+            if (heightTextField != null) {
+                heightTextField.Dispose ();
+                heightTextField = null;
+            }
+
+            if (weightTextField != null) {
+                weightTextField.Dispose ();
+                weightTextField = null;
+            }
         }
     }
 }

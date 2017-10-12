@@ -6,6 +6,11 @@ namespace BMICalculator
 {
     public partial class ViewController : UIViewController
     {
+        void CalculateButton_TouchUpInside(object sender, EventArgs e)
+        {
+
+        }
+
         protected ViewController(IntPtr handle) : base(handle)
         {
             // Note: this .ctor should not contain any initialization logic.
@@ -15,6 +20,18 @@ namespace BMICalculator
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+
+            calculateButton.TouchUpInside+= CalculateButton_TouchUpInside;
+        }
+
+        void CalculateButton_TouchInside(object sender, EventArgs e)
+        {
+            float height = float.Parse(heightTextField.Text);
+            float weight = float.Parse(weightTextField.Text);
+
+            float bmi = (weight / (height * height));
+
+            bmiLabel.Text = bmi.ToString (); 
         }
 
         public override void DidReceiveMemoryWarning()
